@@ -21,10 +21,10 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t my-dockerhub-username/flask-app:${{ github.sha }} .
-          docker tag my-dockerhub-username/flask-app:${{ github.sha }} my-dockerhub-username/flask-app:latest
+          docker build -t my-dockerhub-username/Hello-Word-App:${{ github.sha }} .
+          docker tag my-dockerhub-username/Hello-Word-App:${{ github.sha }} my-dockerhub-username/Hello-Word-App:latest
 
       - name: Push Docker image
         run: |
-          docker push my-dockerhub-username/flask-app:${{ github.sha }}
-          docker push my-dockerhub-username/flask-app:latest
+          docker push my-dockerhub-username/Hello-Word-App:${{ github.sha }}
+          docker push my-dockerhub-username/Hello-Word-App:latest
