@@ -21,10 +21,10 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t n3dhir/Hello-Word-App:${{ github.sha }} .
-          docker tag n3dhir/Hello-Word-App:${{ github.sha }} n3dhir/Hello-Word-App:latest
+          docker build -t n3dhir/hello-word-app:${{ github.sha }} .
+          docker tag n3dhir/hello-word-app:${{ github.sha }} n3dhir/hello-word-app:latest
 
       - name: Push Docker image
         run: |
-          docker push n3dhir/Hello-Word-App:${{ github.sha }}
-          docker push n3dhir/Hello-Word-App:latest
+          docker push n3dhir/hello-word-app:${{ github.sha }}
+          docker push n3dhir/hello-word-app:latest
