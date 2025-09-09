@@ -33,7 +33,8 @@ jobs:
       - name: Lint Python code with pylint
         run: |
           echo "Running pylint on all Python files..."
-          pylint --output-format=colorized $(git ls-files '*.py') || true
+          # pylint --output-format=colorized $(git ls-files '*.py') || true
+          pylint $(git ls-files '*.py')
           
 
 
